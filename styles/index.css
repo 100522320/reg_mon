@@ -1,20 +1,24 @@
+/* 🌹 index_romantico.css: UNIFICADO CON TEMA ROMÁNTICO 🌹 */
+
+/* ESTILOS BASE (TEMA ROMÁNTICO DOMINANTE) */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #fceabb, #f8b500); /* Tonos dorados/cálidos */
-    color: #4b4b4b;
+    background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 40%, #ff8fa3 100%);
+    color: #5a2a2a;
+    font-family: 'Segoe UI', sans-serif; /* Usamos la fuente del tema romántico */
+    margin: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
     text-align: center;
 }
 
+/* CONTENEDOR PRINCIPAL (del index.css, adaptado a tema romántico) */
 .container {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
     padding: 50px 30px;
     border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 40px rgba(168, 50, 68, 0.3); /* Sombra roja vino */
     max-width: 650px;
     width: 90%;
     animation: fadeIn 1.5s ease-out;
@@ -25,19 +29,22 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* TÍTULOS */
 .welcome-title {
-    font-family: 'Playfair Display', serif;
-    color: #a0522d;
+    font-family: 'Playfair Display', serif; /* Mantenemos Playfair para un toque elegante */
+    color: #a83244; /* Rojo vino elegante (Tema Romántico) */
     font-size: 3em;
     margin-bottom: 5px;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
 }
 
 .subtitle {
     font-size: 1.4em;
     margin-bottom: 30px;
-    color: #6a6a6a;
+    color: #5a2a2a; /* Marrón rojizo (Tema Romántico) */
 }
 
+/* GRID DE BOTONES */
 .button-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -45,6 +52,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* BLOQUE INTERACTIVO (BASE) */
 .interactive-block {
     display: flex;
     flex-direction: column;
@@ -54,15 +62,15 @@ body {
     padding: 30px 15px;
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: #fff8e1; /* Base clara */
-    color: #4b4b4b;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo casi blanco */
+    color: #5a2a2a;
     border: 3px solid transparent;
 }
 
 .interactive-block:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-color: #f8b500;
+    box-shadow: 0 10px 20px rgba(232, 90, 112, 0.5); /* Sombra rosa intenso */
+    border-color: #e85a70; /* Borde rosa intenso (Tema Romántico) */
 }
 
 .block-icon {
@@ -76,17 +84,18 @@ body {
     font-weight: 700;
 }
 
+/* BLOQUE DE REGALO (Destacado) */
 .gift {
-    background-color: #fceabb; /* Destaca el regalo */
+    background-color: #ffd1dc; /* Rosa claro destacado */
 }
 
 .gift:hover {
-    border-color: #d35400;
+    border-color: #a83244; /* Rojo vino al pasar el ratón */
 }
 
 .instruction {
     font-style: italic;
-    color: #888;
+    color: #a83244; /* Color de acento para la instrucción */
     margin-top: 20px;
 }
 

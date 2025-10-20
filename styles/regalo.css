@@ -1,7 +1,10 @@
+/* 🌹 regalo_romantico.css: UNIFICADO CON TEMA ROMÁNTICO 🌹 */
+
+/* ESTILOS BASE (TEMA ROMÁNTICO DOMINANTE) */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #fceabb, #f8b500);
-    color: #4b4b4b;
+    background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 40%, #ff8fa3 100%);
+    color: #5a2a2a;
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,17 +15,19 @@ body {
 }
 .hidden { display: none; opacity: 0; }
 
+/* CONTENEDOR PRINCIPAL */
 #gift-container {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(168, 50, 68, 0.3); /* Sombra roja vino */
     max-width: 800px;
     width: 90%;
 }
 
+/* BOTÓN DE REVELACIÓN (Tomado de Tema Romántico) */
 #reveal-button {
-    background-color: #d35400;
+    background-color: #a83244; /* Rojo vino elegante */
     color: white;
     border: none;
     padding: 20px 40px;
@@ -30,11 +35,11 @@ body {
     cursor: pointer;
     font-size: 1.8em;
     font-family: 'Playfair Display', serif;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: all 0.3s ease;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 #reveal-button:hover {
-    background-color: #a0522d;
+    background-color: #e85a70; /* Rosa intenso al pasar el ratón */
     transform: scale(1.05);
 }
 
@@ -43,19 +48,22 @@ body {
     transition: opacity 1.5s ease-in;
 }
 
+/* TÍTULOS DE REVELACIÓN */
 .reveal-title {
     font-family: 'Playfair Display', serif;
-    color: #d35400;
+    color: #a83244; /* Rojo vino */
     font-size: 4em;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
 }
 
 .reveal-text {
     font-size: 1.3em;
-    color: #a0522d;
+    color: #5a2a2a; /* Marrón rojizo */
     margin-bottom: 25px;
 }
 
+/* INFO DE VIAJE */
 .travel-info {
     display: flex;
     justify-content: space-around;
@@ -64,27 +72,28 @@ body {
 }
 
 .info-block {
-    background: #fff8e1;
+    background: #fff8f8; /* Fondo muy claro */
     padding: 20px;
     border-radius: 10px;
     flex: 1;
-    border: 2px solid #f8b500;
+    border: 2px solid #e85a70; /* Borde rosa intenso */
 }
 
 .info-block h2, .info-block h3 {
-    color: #a0522d;
+    color: #a83244; /* Rojo vino */
     margin-top: 0;
 }
 
 .hotel-link {
     display: block;
     margin-top: 10px;
-    color: #d35400;
+    color: #e85a70; /* Rosa intenso */
     text-decoration: none;
     font-weight: 700;
 }
 .hotel-link:hover { text-decoration: underline; }
 
+/* FOTOS DE VIAJE */
 .photo-grid-travel {
     display: flex;
     justify-content: center;
@@ -97,18 +106,18 @@ body {
     max-height: 250px;
     object-fit: cover;
     border-radius: 10px;
-    border: 4px solid white;
+    border: 4px solid #ffd1dc; /* Borde rosa claro */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .final-message {
     font-size: 1.5em;
-    color: #d35400;
+    color: #a83244; /* Rojo vino */
     font-style: italic;
     font-weight: 700;
 }
 
-/* Confeti Canvas */
+/* Confeti Canvas (sin cambios) */
 #confetti-canvas {
     position: fixed;
     top: 0;

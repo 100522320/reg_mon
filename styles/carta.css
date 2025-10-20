@@ -1,42 +1,69 @@
+/* 🌹 carta_romantico.css: UNIFICADO CON TEMA ROMÁNTICO 🌹 */
+
+/* ESTILOS BASE (TEMA ROMÁNTICO DOMINANTE) */
 body { 
-            font-family: 'Playfair Display', serif; 
-            background: linear-gradient(to top right, #fceabb, #f8b500); 
-            min-height: 100vh; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            padding: 30px;
-        }
-        .paper {
-            background-color: #fffaf0; /* Color de papel crema */
-            background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='p' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 0h100v100H0z' fill='rgba(0, 0, 0, 0)' stroke='rgba(0,0,0,0.1)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23p)'/%3E%3C/svg%3E");
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            max-width: 700px;
-            width: 100%;
-            text-align: left;
-            line-height: 1.8;
-            position: relative;
-        }
-        .paper-title {
-            font-family: 'Playfair Display', serif;
-            color: #a0522d;
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .paper-content {
-            font-family: 'Nanum Pen Script', cursive; /* Fuente de escritura a mano */
-            font-size: 1.5em;
-            color: #333;
-            white-space: pre-wrap; /* Mantiene saltos de línea y espacios */
-        }
-        .signature {
-            margin-top: 30px;
-            text-align: right;
-            font-style: italic;
-            font-weight: bold;
-        }
-        .back-button { position: absolute; top: 15px; left: 15px; padding: 10px; background-color: #f8b500; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; font-family: 'Montserrat', sans-serif;}
-        .back-button:hover { background-color: #d35400; }
+    font-family: 'Playfair Display', serif; 
+    background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 40%, #ff8fa3 100%); /* Fondo romántico */
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 30px;
+    color: #5a2a2a; /* Color de texto base */
+}
+
+/* CONTENEDOR DE PAPEL */
+.paper {
+    background-color: #fffaf0; /* Color de papel crema */
+    /* Mantenemos el fondo de textura de papel original */
+    background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='p' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 0h100v100H0z' fill='rgba(0, 0, 0, 0)' stroke='rgba(0,0,0,0.1)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23p)'/%3E%3C/svg%3E");
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(168, 50, 68, 0.3); /* Sombra roja vino */
+    max-width: 700px;
+    width: 100%;
+    text-align: left;
+    line-height: 1.8;
+    position: relative;
+}
+
+.paper-title {
+    font-family: 'Playfair Display', serif;
+    color: #a83244; /* Rojo vino */
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.paper-content {
+    font-family: 'Nanum Pen Script', cursive; /* Fuente de escritura a mano */
+    font-size: 1.5em;
+    color: #333;
+    white-space: pre-wrap;
+}
+
+.signature {
+    margin-top: 30px;
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+    color: #a83244; /* Rojo vino */
+}
+
+/* BOTÓN DE RETORNO (Estilo Romántico) */
+.back-button { 
+    position: absolute; 
+    top: 15px; 
+    left: 15px; 
+    padding: 10px 20px; 
+    background-color: #e85a70; /* Rosa intenso */
+    color: white; 
+    text-decoration: none; 
+    border-radius: 25px; /* Tomado de Tema Romántico */
+    transition: all 0.3s ease; 
+    font-family: 'Segoe UI', sans-serif; /* Usamos la fuente del tema romántico para los botones */
+}
+.back-button:hover { 
+    background-color: #d94c64; 
+    transform: scale(1.05); 
+}

@@ -1,9 +1,70 @@
-body { font-family: 'Montserrat', sans-serif; background: #fceabb; color: #4b4b4b; text-align: center; padding-bottom: 50px; }
-        .header { background: #f3efee; color: white; padding: 20px; margin-bottom: 30px; }
-        .header h1 { margin: 0; font-family: 'Playfair Display', serif; }
-        .photo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 0 20px; }
-        .photo-card { background: white; padding: 10px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s; }
-        .photo-card:hover { transform: scale(1.05); }
-        .photo-card img { width: 100%; max-width: 300px; height: auto; border-radius: 5px; }
-        .back-button { margin-top: 30px; padding: 10px 20px; background-color: #f8b500; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }
-        .back-button:hover { background-color: #d35400; }
+/* 🌹 fotos_romantico.css: UNIFICADO CON TEMA ROMÁNTICO 🌹 */
+
+/* ESTILOS BASE (TEMA ROMÁNTICO DOMINANTE) */
+body { 
+    background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 40%, #ff8fa3 100%);
+    color: #5a2a2a;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center; 
+    padding-bottom: 50px; 
+    margin: 0;
+}
+
+/* ENCABEZADO */
+.header { 
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente/blanco */
+    color: #a83244; /* Rojo vino */
+    padding: 20px; 
+    margin-bottom: 30px; 
+    border-bottom: 3px solid #e85a70; /* Borde rosa intenso */
+}
+.header h1 { 
+    margin: 0; 
+    font-family: 'Playfair Display', serif; 
+    color: #a83244; /* Asegura el color del h1 */
+}
+
+/* GRID DE FOTOS */
+.photo-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 0 20px; 
+}
+
+/* TARJETA DE FOTO */
+.photo-card { 
+    background: white; 
+    padding: 10px; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s; 
+    border: 3px solid #ffd1dc; /* Borde rosa claro suave */
+}
+.photo-card:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(232, 90, 112, 0.5); /* Sombra con el color de acento */
+}
+.photo-card img { 
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+/* BOTÓN DE RETORNO (Estilo Romántico) */
+.back-button { 
+    margin-top: 30px; 
+    padding: 12px 25px; /* Tomado de Tema Romántico */
+    background-color: #e85a70; /* Rosa intenso */
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 25px; /* Tomado de Tema Romántico */
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra Romántica */
+}
+.back-button:hover { 
+    background-color: #d94c64; /* Rosa oscuro */
+    transform: scale(1.05); /* Escala Romántica */
+}
