@@ -24,20 +24,21 @@ body {
     color: #a83244; /* Asegura el color del h1 */
 }
 
-/* GRID DE FOTOS (Masonry Effect) */
 /* GRID DE FOTOS (Mosaico / Masonry Effect) */
 .photo-grid { 
     display: grid; 
-    
-    /* Repite columnas con un ancho mínimo de 280px */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     
-    /* 🔑 CLAVE 1: Define filas pequeñas de 10px para la referencia de cálculo del JS */
+    /* 🔑 CLAVE 1: La fila base sigue siendo 1px para cálculo exacto */
     grid-auto-rows: 1px; 
     
     justify-content: center; 
-    gap: 20px; 
-    padding: 0 20px; 
+    
+    /* 🔑 CLAVE 2: ¡Quitamos el GAP del grid! */
+    gap: 0; 
+    
+    /* 🔑 CLAVE 3: Ajustamos el padding del contenedor */
+    padding: 0 10px; 
 }
 
 /* TARJETA DE FOTO */
@@ -48,14 +49,12 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s; 
     border: 3px solid #ffd1dc;
-    
-    /* 🔑 CLAVE 2: Anula el espacio vertical del texto alternativo (si la imagen falla) */
     line-height: 0; 
-    
-    /* 🔑 CLAVE 3: Asegura que la tarjeta no tenga una altura mínima forzada por herencia */
     min-height: 0 !important; 
     
-    /* El JS inyectará el 'grid-row-end: span X;' aquí */
+    /* 🔑 CLAVE 4: Añadimos el MARGEN para simular el gap */
+    /* Esto crea 10px de espacio alrededor de CADA tarjeta */
+    margin: 10px; 
 }
 
 /* IMAGEN DENTRO DE LA TARJETA */
@@ -63,11 +62,7 @@ body {
     width: 100%; 
     height: auto; 
     border-radius: 5px; 
-    
-    /* 🔑 CLAVE 4: Elimina el espacio que dejan las imágenes como elementos 'inline' */
     display: block; 
-    
-    /* Opcional: Elimina la visualización del texto si la imagen no carga, para no romper el layout */
     font-size: 0; 
 }
 
