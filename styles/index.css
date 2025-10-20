@@ -23,6 +23,32 @@ body {
     width: 90%;
     animation: fadeIn 1.5s ease-out;
 }
+/* Clase para equilibrar la corona y el titulo */ 
+.flex_emoji{
+    display: flex;
+    align-items: center; /* ESTO CENTRA VERTICALMENTE */
+    justify-content: center;
+    gap: 15px; /* Añade un pequeño espacio entre el título y la corona */
+}
+
+/* 👑 SOLUCIÓN: Anular los márgenes de los <h1> dentro del contenedor */
+.flex_emoji h1 {
+    margin: 0; 
+    padding: 0;
+}
+
+.corona_emoji{
+    font-size: 3em; 
+    margin: 0; /* Cambio a 'margin: 0' para cubrir todos los lados */
+    padding: 0;
+    
+    /* 🔑 CLAVE: Mover el emoji ligeramente hacia abajo */
+    /* Prueba con -10% o -15% y ajústalo visualmente */
+    transform: translateY(-10%); 
+    /* Necesitas esta propiedad para que transform: translateY() funcione */
+    display: inline-block;
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -62,7 +88,7 @@ body {
     padding: 30px 15px;
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo casi blanco */
+    background-color: #f8d2d8; /* Fondo casi blanco */
     color: #5a2a2a;
     border: 3px solid transparent;
 }
@@ -86,7 +112,7 @@ body {
 
 /* BLOQUE DE REGALO (Destacado) */
 .gift {
-    background-color: #ffd1dc; /* Rosa claro destacado */
+    background-color: #f790a8; /* Rosa claro destacado */
 }
 
 .gift:hover {

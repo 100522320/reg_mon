@@ -1,0 +1,135 @@
+/* 🌹 recuerdos.css (PLAYLIST): UNIFICADO CON TEMA ROMÁNTICO 🌹 */
+
+/* ESTILOS BASE (TEMA ROMÁNTICO DOMINANTE) */
+body { 
+    background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 40%, #ff8fa3 100%);
+    color: #5a2a2a;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center; 
+    padding-bottom: 50px; 
+    margin: 0;
+}
+
+/* ENCABEZADO */
+.header { 
+    background: #a83244; /* Rojo vino sólido (Tema Romántico) */
+    color: white; 
+    padding: 20px; 
+    margin-bottom: 30px; 
+}
+.header h1 { 
+    margin: 0; 
+    font-family: 'Playfair Display', serif; 
+    color: white; 
+    text-shadow: none; 
+}
+
+/* GRID DE PLAYLIST */
+.playlist-grid { 
+    display: flex; 
+    flex-direction: column; /* Cambiamos a columna para que parezca una lista de canciones */
+    align-items: center; /* Centramos las tarjetas */
+    gap: 20px; 
+    padding: 0 20px; 
+}
+
+/* TARJETA DE CANCIÓN */
+.song-card { 
+    background: white; 
+    padding: 15px 25px; 
+    border-radius: 15px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    max-width: 700px; /* Hacemos la tarjeta más ancha */
+    width: 90%;
+    text-align: left; 
+    border-left: 5px solid #e85a70; /* Color rosa intenso (Tema Romántico) */
+    transition: transform 0.3s; 
+    display: flex;
+    justify-content: space-between; /* Alinea info a izquierda, botón a derecha */
+    align-items: center;
+}
+.song-card:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(232, 90, 112, 0.3);
+}
+
+/* Contenido interno de la canción */
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Icono de Álbum/Cover */
+.album-cover {
+    font-size: 2.5em;
+    padding-right: 10px;
+    color: #a83244; /* Rojo vino */
+}
+
+.song-card h2 { 
+    color: #a83244; /* Rojo vino */
+    font-size: 1.4em; 
+    margin: 0 0 5px 0; 
+}
+
+.artist-name {
+    font-weight: 700;
+    color: #e85a70;
+    margin: 0;
+}
+
+.memory-text {
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #5a2a2a;
+}
+
+/* BOTÓN DE PLAY */
+.play-button {
+    background-color: #a83244; /* Rojo vino */
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 50px; /* Redondo */
+    padding: 10px 20px; 
+    font-weight: 700;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    flex-shrink: 0; /* Evita que el botón se haga pequeño */
+}
+.play-button:hover {
+    background-color: #e85a70; /* Rosa intenso al pasar el ratón */
+    transform: scale(1.05); 
+}
+
+
+/* BOTÓN DE RETORNO (Estilo Romántico) */
+.back-button { 
+    margin-top: 30px; 
+    padding: 12px 25px; 
+    background-color: #e85a70; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 25px; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    display: inline-block;
+}
+.back-button:hover { 
+    background-color: #d94c64; 
+    transform: scale(1.05); 
+}
+
+/* Responsive para que se vea bien en móviles */
+@media (max-width: 650px) {
+    .song-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .play-button {
+        align-self: flex-end; /* Mueve el botón a la derecha en móvil */
+        margin-top: 15px;
+    }
+}
