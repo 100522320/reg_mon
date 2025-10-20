@@ -1,5 +1,5 @@
 body { font-family: 'Montserrat', sans-serif; background: #fceabb; color: #4b4b4b; text-align: center; padding-bottom: 50px; }
-        .header { background: #ee5c45; color: white; padding: 20px; margin-bottom: 30px; }
+        .header { background: #f3efee; color: white; padding: 20px; margin-bottom: 30px; }
         .header h1 { margin: 0; font-family: 'Playfair Display', serif; }
         .photo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 0 20px; }
         .photo-card { background: white; padding: 10px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s; }
