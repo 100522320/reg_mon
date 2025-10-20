@@ -24,10 +24,17 @@ body {
     color: #a83244; /* Asegura el color del h1 */
 }
 
-/* GRID DE FOTOS */
+/* GRID DE FOTOS (Masonry Effect) */
+/* GRID DE FOTOS (Mosaico / Masonry Effect) */
 .photo-grid { 
-    display: flex; 
-    flex-wrap: wrap; 
+    display: grid; 
+    
+    /* Repite columnas con un ancho mínimo de 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    
+    /* 🔑 CLAVE 1: Define filas pequeñas de 10px para la referencia de cálculo del JS */
+    grid-auto-rows: 1px; 
+    
     justify-content: center; 
     gap: 20px; 
     padding: 0 20px; 
@@ -40,29 +47,47 @@ body {
     border-radius: 10px; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s; 
-    border: 3px solid #ffd1dc; /* Borde rosa claro suave */
+    border: 3px solid #ffd1dc;
+    
+    /* 🔑 CLAVE 2: Anula el espacio vertical del texto alternativo (si la imagen falla) */
+    line-height: 0; 
+    
+    /* 🔑 CLAVE 3: Asegura que la tarjeta no tenga una altura mínima forzada por herencia */
+    min-height: 0 !important; 
+    
+    /* El JS inyectará el 'grid-row-end: span X;' aquí */
 }
+
+/* IMAGEN DENTRO DE LA TARJETA */
+.photo-card img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    
+    /* 🔑 CLAVE 4: Elimina el espacio que dejan las imágenes como elementos 'inline' */
+    display: block; 
+    
+    /* Opcional: Elimina la visualización del texto si la imagen no carga, para no romper el layout */
+    font-size: 0; 
+}
+
 .photo-card:hover { 
     transform: scale(1.05); 
     box-shadow: 0 8px 20px rgba(232, 90, 112, 0.5); /* Sombra con el color de acento */
 }
-.photo-card img { 
-    width: 100%; 
-    max-width: 300px; 
-    height: auto; 
-    border-radius: 5px; 
-}
+
 
 /* BOTÓN DE RETORNO (Estilo Romántico) */
 .back-button { 
     margin-top: 30px; 
-    padding: 12px 25px; /* Tomado de Tema Romántico */
-    background-color: #e85a70; /* Rosa intenso */
+    padding: 12px 25px; 
+    background-color: #e85a70; 
     color: #fff; 
     text-decoration: none; 
-    border-radius: 25px; /* Tomado de Tema Romántico */
+    border-radius: 25px; 
     transition: all 0.3s ease; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra Romántica */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    display: inline-block;
 }
 .back-button:hover { 
     background-color: #d94c64; /* Rosa oscuro */
