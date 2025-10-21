@@ -48,9 +48,21 @@ body {
     justify-content: space-between; /* Alinea info a izquierda, botón a derecha */
     align-items: center;
 }
+
+#nuestra-cancion{
+    background: #fd8d8d;
+}
+
+#nuestra-cancion h2{
+    color: white; 
+    font-size: 1.4em; 
+    margin: 0 0 5px 0; 
+}
+
 .song-card:hover { 
     transform: translateY(-3px); 
     box-shadow: 0 8px 20px rgba(232, 90, 112, 0.3);
+    transform: scale(1.05); 
 }
 
 /* Contenido interno de la canción */
@@ -79,11 +91,12 @@ body {
     margin: 0;
 }
 
-.memory-text {
-    font-size: 0.9em;
-    margin-top: 5px;
-    color: #5a2a2a;
+.artist-name-especial {
+    font-weight: 700;
+    color: white;
+    margin: 0;
 }
+
 
 /* BOTÓN DE PLAY */
 .play-button {
@@ -102,6 +115,21 @@ body {
     transform: scale(1.05); 
 }
 
+.play-button-especial {
+    background-color: white; /* Rojo vino */
+    color: #a83244; 
+    text-decoration: none; 
+    border-radius: 50px; /* Redondo */
+    padding: 10px 20px; 
+    font-weight: 700;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    flex-shrink: 0; /* Evita que el botón se haga pequeño */
+}
+.play-button-especial:hover {
+    background-color: #f99aa8; /* Rosa intenso al pasar el ratón */
+    transform: scale(1.05); 
+}
 
 /* BOTÓN DE RETORNO (Estilo Romántico) */
 .back-button { 
@@ -129,6 +157,10 @@ body {
         padding-bottom: 25px;
     }
     .play-button {
+        align-self: flex-end; /* Mueve el botón a la derecha en móvil */
+        margin-top: 15px;
+    }
+    .play-button-especial {
         align-self: flex-end; /* Mueve el botón a la derecha en móvil */
         margin-top: 15px;
     }
