@@ -94,7 +94,11 @@ body {
 .hotel-link:hover { text-decoration: underline; }
 
 /* FOTOS DE VIAJE */
-.photo-grid-travel {
+.photo-grid-travel{
+    display: grid;
+    grid-template-rows: repeat(3,250px);
+}
+.photo-flex-travel {
     display: flex;
     justify-content: center;
     gap: 15px;
